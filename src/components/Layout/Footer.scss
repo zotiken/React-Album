@@ -1,0 +1,37 @@
+@import '../../sass/variables';
+@import '../../sass/media';
+
+
+.footer {
+  display: flex;
+  padding: 2rem 12rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-color-white;
+  color: $color-white-2;
+  border-top: 1px solid #fafafa;
+
+  @include respond(tab-land) {
+    padding: 2rem 6rem;
+  }
+
+  @include respond(phone) {
+    padding: 2rem;
+  }
+
+  & .name {
+    @include respond(phone) {
+      display: none;
+    }
+  
+  }
+  
+  p{
+    a{
+      text-transform: uppercase;
+      color: #666666;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+  }
+  }

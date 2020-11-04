@@ -1,0 +1,62 @@
+@import '../../sass/variables';
+
+.albumList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.albumItem {
+  box-shadow: 0 0 10px 5px $color-dark;
+  border-radius: 10px;
+  transition: .3s linear;
+  position: relative;
+
+
+  &:hover {
+    background-color: rgb(167, 164, 164);
+    transition: .2s linear;
+
+    *{
+      color: $color-dark;
+      p{
+        text-align: center;
+        font-size: 2rem;
+
+        &:first-child {
+          padding: 0;
+          margin: 0;
+          font-size: 2rem;
+          color: $color-white;
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+
+      }
+    }
+  }
+
+}
+
+.albumPhoto {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  min-height: 13rem;
+  padding: 2rem;
+  color: $color-white;
+
+  p{
+    text-align: left;
+    padding: 10px;
+  }
+
+}
+
+.link {
+  text-decoration: none;
+}

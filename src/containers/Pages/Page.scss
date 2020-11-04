@@ -1,0 +1,93 @@
+@import '../../sass/variables';
+@import '../../sass/media';
+
+
+.main {
+  display: flex;
+
+  &--col {
+    flex-direction: column;
+  }
+}
+
+.photosPage {
+  width: 60%;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: .2rem;
+
+  @include respond(tab-land) {
+    grid-gap: 3rem;
+    width: 100%;
+
+  }
+
+  @include respond(phone) {
+    grid-gap: 2rem;
+    width: 100%;
+
+  }
+}
+
+.titleBar {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+}
+
+.titleBarPhoto {
+  width: 30%;
+  position: fixed;
+  top: 100px;
+display: flex;
+align-items: center;
+
+@include respond(tab-land) {
+  position: static;
+  width: 100%;
+padding: 20px;
+}
+
+
+@include respond(phone) {
+  position: static;
+  width: 100%;
+  text-align: center;
+}
+
+}
+
+.back {
+  border: 1px solid red;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $color-white;
+  font-size: 2rem;
+  padding: 0 2rem;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: red;
+  }
+}
+
+.heading1 {
+  color: $color-white;
+  letter-spacing: 1px;
+  width: 100%;
+}
